@@ -669,3 +669,9 @@ PubSubClient& PubSubClient::setStream(Stream& stream){
 int PubSubClient::state() {
     return this->_state;
 }
+
+void PubSubClient::info() {
+  Serial.println(F("MQTT Client"));
+  Serial.printf("\tMQTT_VERSION:%d\n", MQTT_VERSION);
+  Serial.printf("\tMQTT_MAX_PACKET_SIZE:%d\n", MQTT_MAX_PACKET_SIZE);
+}

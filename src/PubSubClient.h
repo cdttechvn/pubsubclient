@@ -16,12 +16,13 @@
 #define MQTT_VERSION_3_1_1    4
 
 // MQTT_VERSION : Pick the version
-//#define MQTT_VERSION MQTT_VERSION_3_1
+#define MQTT_VERSION MQTT_VERSION_3_1
 #ifndef MQTT_VERSION
 #define MQTT_VERSION MQTT_VERSION_3_1_1
 #endif
 
 // MQTT_MAX_PACKET_SIZE : Maximum packet size
+#define MQTT_MAX_PACKET_SIZE 4000
 #ifndef MQTT_MAX_PACKET_SIZE
 #define MQTT_MAX_PACKET_SIZE 128
 #endif
@@ -167,6 +168,7 @@ public:
    boolean loop();
    boolean connected();
    int state();
+   void info();
 };
 
 
