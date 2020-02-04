@@ -672,6 +672,20 @@ int PubSubClient::state() {
 
 void PubSubClient::info() {
   Serial.println(F("MQTT Client"));
-  Serial.printf("\tMQTT_VERSION:%d\n", MQTT_VERSION);
+
+  switch (MQTT_VERSION) {
+  case MQTT_VERSION_3_1:
+    Serial.printf("\tMQTT_VERSION:MQTT_VERSION_3_1\n");
+    break;
+  default:
+    Serial.printf("\tMQTT_VERSION:MQTT_VERSION_3_1_1\n");
+    break;
+  }
   Serial.printf("\tMQTT_MAX_PACKET_SIZE:%d\n", MQTT_MAX_PACKET_SIZE);
+  if (domain != NULL) {
+    Serial.printf("\tMQTT_DOMAIN:%s\n", domain);
+  } else {
+    Serial.printf("\tMQTT_IP:%s\n", ip.toString().c_str());
+  }
+  Serial.printf("\tMQTT_PORT:%d\n", port);
 }
