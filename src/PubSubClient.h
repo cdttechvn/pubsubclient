@@ -28,6 +28,7 @@
 #endif
 
 // MQTT_KEEPALIVE : keepAlive interval in Seconds
+#define MQTT_KEEPALIVE 60
 #ifndef MQTT_KEEPALIVE
 #define MQTT_KEEPALIVE 15
 #endif
