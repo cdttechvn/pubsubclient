@@ -22,7 +22,7 @@
 #endif
 
 // MQTT_MAX_PACKET_SIZE : Maximum packet size
-#define MQTT_MAX_PACKET_SIZE 4000
+#define MQTT_MAX_PACKET_SIZE 2000
 #ifndef MQTT_MAX_PACKET_SIZE
 #define MQTT_MAX_PACKET_SIZE 128
 #endif
