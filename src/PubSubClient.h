@@ -38,6 +38,11 @@
 #define MQTT_SOCKET_TIMEOUT 15
 #endif
 
+// MQTT_RECONNECT_TIMEOUT: MQTT reconnect timeout interval in milliseconds
+#ifndef MQTT_RECONNECT_TIMEOUT
+#define MQTT_RECONNECT_TIMEOUT 1000
+#endif
+
 // MQTT_MAX_TRANSFER_SIZE : limit how much data is passed to the network client
 //  in each write call. Needed for the Arduino Wifi Shield. Leave undefined to
 //  pass the entire MQTT packet in each write call.

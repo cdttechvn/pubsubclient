@@ -127,7 +127,8 @@ boolean PubSubClient::connect(const char *id, const char *user, const char *pass
             result = 1;
         } else {
             if (domain != NULL) {
-                result = _client->connect(this->domain, this->port);
+                // result = _client->connect(this->domain, this->port);
+                result = _client->connect(this->domain, this->port, (int32_t) MQTT_RECONNECT_TIMEOUT);
             } else {
                 result = _client->connect(this->ip, this->port);
             }
