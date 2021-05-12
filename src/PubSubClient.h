@@ -40,7 +40,7 @@
 
 // MQTT_RECONNECT_TIMEOUT: MQTT reconnect timeout interval in milliseconds
 #ifndef MQTT_RECONNECT_TIMEOUT
-#define MQTT_RECONNECT_TIMEOUT 1000
+#define MQTT_RECONNECT_TIMEOUT 1000UL
 #endif
 
 // MQTT_MAX_TRANSFER_SIZE : limit how much data is passed to the network client
